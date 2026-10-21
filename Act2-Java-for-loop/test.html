@@ -1,0 +1,106 @@
+  <!doctype html>
+  <html lang="en" data-bs-theme="light">
+
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row" id="parent">
+        <!-- parent  -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script>
+
+      var people = [
+        {
+          firstName: "Ada",
+          lastName: "Lovelace",
+          age: 28,
+          isLoggedIn: true,
+          pets: [
+            {
+              name: "Whitey",
+              kind: "cat",
+            },
+            {
+              name: "Browney",
+              kind: "dog",
+            },
+          ],
+        },
+        {
+          firstName: "Bill",
+          lastName: "Gates",
+          age: 28,
+          isLoggedIn: true,
+          pets: [
+            {
+              name: "Lob",
+              kind: "Lobster",
+            },
+            {
+              name: "Elon",
+              kind: "dog",
+            },
+          ],
+        },
+        {
+          firstName: "Mak",
+          lastName: "Gates",
+          age: 28,
+          isLoggedIn: true,
+          pets: [
+            {
+              name: "Lob",
+              kind: "Lobster",
+            },
+            {
+              name: "Elon",
+              kind: "dog",
+            },
+          ],
+        },
+      ];
+
+
+      var elParent = document.getElementById("parent");
+      for (var i = 0; i < people.length; i++) {
+        elParent.innerHTML +=
+          `<div class="col">
+            <div class="card p-3 my-3 shadow rounded-4">
+              <div class="h3" id=>` + people[i].firstName + " " + people[i].lastName
+          + `</div>
+              <div class="h5" id=>` + people[i].pets[0].name
+          + `</div>
+            <div class="h5" id=>` + "Kind: "+ people[i].pets[0].kind
+          + `</div>
+              <div class="h5" id=>` + people[i].pets[1].name
+          + `</div>
+            <div class="h5" id=>` + "Kind: "+ people[i].pets[1].kind
+          + `</div>
+              <div class="my-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
+                quidem molestiae natus quia obcaecati, asperiores illo architecto
+                similique odio adipisci mollitia veritatis. Perspiciatis hic,
+                doloribus neque similique libero voluptas laudantium!
+              </div>
+            </div>
+          </div>`;
+      }
+
+
+
+    </script>
+  </body>
+
+  </html>
